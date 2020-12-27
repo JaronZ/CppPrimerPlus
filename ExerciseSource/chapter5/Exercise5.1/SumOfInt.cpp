@@ -1,4 +1,5 @@
 //Exercise5.1
+/*用户输入两个整数，程序输出这两个整数之间(包括这两个整数)的所有整数和*/
 #include<iostream>
 using namespace std;
 
