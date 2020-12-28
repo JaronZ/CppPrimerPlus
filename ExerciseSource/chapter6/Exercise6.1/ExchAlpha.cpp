@@ -9,12 +9,13 @@ int main(){
 	char ch=cin.get();
 	while(ch!='@'){
 		//if(isalpha(ch)||isspace(ch)||ispunct(ch)){
-		if(!isdigit(ch))
+		if(!isdigit(ch)){
 			//ch=(islower(ch)&&isalpha(ch))?toupper(ch):tolower(ch);
 			ch=(isalpha(ch)&&islower(ch))?toupper(ch):tolower(ch);
 			cout<<ch;
 		}
 		ch=cin.get();
-	}
+	}	
 	return 0;
 }
+	
