@@ -31,6 +31,7 @@ int main(){
 		}
 		in>>donors[i].fund;
 	}
+	in.close();
 
 	//显示
 	n=0;
