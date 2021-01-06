@@ -1,8 +1,8 @@
-Main.exe:Main.o Sale.o
-	g++ -o Sale.exe Main.o Sale.o
-Main.o:Main.cpp Sale.hpp
-	g++ -c Main.cpp
-Sale.o:Sale.cpp Sale.hpp
-	g++ -c Sale.cpp
+objects=Main.o Sale.o
+Sale:$(objects)
+	g++ -o Sale.exe $(objects)
+Main.o:Sale.hpp
+Sale.o:Sale.hpp
+.PHONY:clean
 clean:
-	rm Sale.exe *.o *.cpp *.hpp
+	-rm $(objects)
