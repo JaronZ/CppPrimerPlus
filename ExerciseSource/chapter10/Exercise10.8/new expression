@@ -1,0 +1,12 @@
+//这里以template complex<int>为例，剖析new操作符的底层调用
+complex<int>* pc=new complex<int>(1,2);
+//等同于如下的调用
+complex<int> *pc;
+try{
+	void* men = operator new(sizeof(complex<int>));//这里的new为全局的operator new
+	pc = static_cast<complex<int>*>(men);
+	pc->complex<int>::complex<int>(1,2);
+}
+catch(std::bad_alloc){
+	//调用失败
+}
